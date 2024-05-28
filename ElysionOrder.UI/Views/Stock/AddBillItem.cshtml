@@ -1,0 +1,151 @@
+﻿@model ElysionOrder.Application.Services.Dtos.BillItemDto
+
+
+<div class="seperator-header layout-top-spacing">
+    <h4 class=""> Kalem Ekle</h4>
+    <br />
+    @using (Html.BeginForm("AddBillItem", "Stock"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <p> </p>
+                            <p> </p>
+                            <h6>Fatura Id</h6>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="col-md-10">
+                    @Html.Hidden("BillId")
+                    @Html.EditorFor(model=>model.BillId, new { htmlAttributes = new { @class = "form-control",  disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.BillId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+          
+
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h6>Ürün Listesi</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.DropDownList("ProductId", new SelectList(ViewBag.ProductList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-lg" })
+                    @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+
+                            <h6>Adet</h6>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model=>model.Piece,"", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model=>model.Piece, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+
+                            <h6>Fiyat</h6>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model=>model.Price,"", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model=>model.Price, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+
+                            <h6>İskonto</h6>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model=>model.Discount,"", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model=>model.Discount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h6>Vergi</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.DropDownList("TaxId", new SelectList(ViewBag.TaxList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-lg" })
+                    @Html.ValidationMessageFor(model => model.TaxId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h6>Ürünün Alındığı Depo</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.DropDownList("StoreId", new SelectList(ViewBag.StoreList, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-lg" })
+                    @Html.ValidationMessageFor(model => model.TaxId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ekle" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+
+
+</div>

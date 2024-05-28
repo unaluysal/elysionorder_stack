@@ -1,0 +1,162 @@
+﻿@model ElysionOrder.Application.Services.Dtos.UserDto
+
+@{
+    ViewBag.Title = "Kullanıcı Sil";
+}
+
+
+
+<div class="middle-content container-xxl p-0">
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Analytics">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="User/Delete">Kullanıcılar</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sil</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+
+    <div class="seperator-header layout-top-spacing">
+        <h4 class="">Kullanıcı Sil</h4>
+        <br />
+        <h6 class="label-danger" style="color:orangered">Silmek İstediğinize Emin Misiniz ?</h6>
+
+
+    </div>
+
+    @using (Html.BeginForm("Delete", "User"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Ad</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Soyad</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Telefon</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Email</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Giriş Adı</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LoginName, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.LoginName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            
+             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Tipi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserTypeDto.Name, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.UserTypeDto.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Sil" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <div>
+        @Html.ActionLink("Kullanıcı Tipleri", "Index")
+    </div>
+
+</div>

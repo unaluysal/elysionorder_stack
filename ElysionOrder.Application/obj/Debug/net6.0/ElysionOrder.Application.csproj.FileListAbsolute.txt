@@ -1,0 +1,12 @@
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\bin\Debug\net6.0\ElysionOrder.Application.deps.json
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\bin\Debug\net6.0\ElysionOrder.Application.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\bin\Debug\net6.0\ElysionOrder.Application.pdb
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.csproj.AssemblyReference.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.AssemblyInfoInputs.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.AssemblyInfo.cs
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.csproj.CoreCompileInputs.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\refint\ElysionOrder.Application.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ElysionOrder.Application.pdb
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application\obj\Debug\net6.0\ref\ElysionOrder.Application.dll

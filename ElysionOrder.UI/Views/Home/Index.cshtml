@@ -1,0 +1,340 @@
+﻿@model ElysionOrder.Application.Services.Dtos.DashBoardDto
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="~/src/plugins/src/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="~/src/assets/css/light/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="~/src/assets/css/dark/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+   
+    <link href="~/src/assets/css/light/components/list-group.css" rel="stylesheet" type="text/css">
+    <link href="~/src/assets/css/light/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+             
+    <link href="~/src/assets/css/dark/components/list-group.css" rel="stylesheet" type="text/css">
+    <link href="~/src/assets/css/dark/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+}
+
+
+                    <div class="middle-content container-xxl p-0">
+
+                    <!--  BEGIN BREADCRUMBS  -->
+                    <div class="secondary-nav">
+                        <div class="breadcrumbs-container" data-page-heading="Analytics">
+                            <header class="header navbar navbar-expand-sm">
+                                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                </a>
+                                <div class="d-flex breadcrumb-content">
+                                    <div class="page-header">
+
+                                        <div class="page-title">
+                                        </div>
+
+                                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Özet</li>
+                                            </ol>
+                                        </nav>
+
+                                    </div>
+                                </div>
+                                <ul class="navbar-nav flex-row ms-auto breadcrumb-action-dropdown">
+                                   
+                                </ul>
+                            </header>
+                        </div>
+                    </div>
+                    <!--  END BREADCRUMBS  -->
+
+                    <div class="row layout-top-spacing">
+
+                        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                            <div class="widget widget-six">
+                                <div class="widget-heading">
+                                    <h6 class="">Günlük Satış</h6>
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="statistics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                            </a>
+
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-chart">
+                                    <div class="w-chart-section">
+                                        <div class="w-detail">
+                                         <p class="w-title">Açılan Sipariş</p>
+                                           <p class="w-stats">@Model.DailySalesCount</p>
+                                        </div>
+                                        <div class="w-chart-render-one">
+                                            <div id="total-users"></div>
+                                        </div>
+                                    </div>
+
+                 
+                                    <div class="w-chart-section">
+                                        <div class="w-detail">
+                                            <p class="w-title">Tamamlanan Sipariş</p>
+                                          <p class="w-stats">@Model.DailySalesDoneCount</p>
+                                        </div>
+                                        <div class="w-chart-render-one">
+                                            <div id="paid-visits"></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                            <div class="widget widget-card-four">
+                                <div class="widget-content">
+                                    <div class="w-header">
+                                        <div class="w-info">
+                                            <h6 class="value">Düne Göre</h6>
+                                        </div>
+                                        <div class="task-action">
+                                            <div class="dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="expenses" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-content">
+
+                                        <div class="w-info">
+                            <p class="value">@(Model.DailySalesCount-Model.LastDayTotalSales) <span>Satış Farkı ( Negatif Düşüğü Gösterir)</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="w-progress-stats">                                            
+                                        <div class="progress">
+                            <div class="progress-bar bg-gradient-secondary" role="progressbar" style="width: @Model.LastDayTotalSalesPercent%" aria-valuenow="@Model.LastDayTotalSalesPercent" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <div class="">
+                                            <div class="w-icon">
+                                <p>@Model.LastDayTotalSalesPercent.ToString() %</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                            <div class="widget widget-card-five">
+                                <div class="widget-content">
+                                    <div class="account-box">
+
+                                        <div class="info-box">
+                                            <div class="icon">
+                                                <span>
+                                                    <img src="../src/assets/img/money-bag.png" alt="money-bag">
+                                                </span>
+                                            </div>
+
+                                            <div class="balance-info">
+                                                <h6>Bugün  </h6>
+                                                <p>@Model.DailySalesTotalPrice</p>
+                                            </div>
+
+                            
+                           
+                                        </div>
+                        
+
+                                        <div class="card-bottom-section">
+                                        @if (Model.DailySalesLastDayTotalPricePercent>0)
+                            {
+                                <div><span class="badge badge-light-success">@Model.DailySalesLastDayTotalPricePercent %  Düne Göre <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span></div>
+
+                            }
+                            else
+                            {
+                                <div><span class="badge badge-light-danger">@Model.DailySalesLastDayTotalPricePercent %  Düne Göre <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-down"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg></span></div>
+
+                            }
+                             <div class="info-box">
+                            <div class="balance-info">
+                                <h6>Dün  </h6>
+                                <p>@Model.DailySalesLastDayTotalPrice</p>
+                            </div>
+                            
+                        </div>
+                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <div class="widget widget-table-two">
+
+                <div class="widget-heading">
+                    <h5 class="">Bugün Çok Alanlar</h5>
+                </div>
+
+                <div class="widget-content">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><div class="th-content">Müşteri</div></th>
+                                    <th><div class="th-content">Tipi</div></th>
+                                    <th><div class="th-content">Tutar</div></th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.TopBuyer!=null)
+                                {
+                                    foreach (var item in Model.TopBuyer)
+                                    {
+                                        <tr>
+
+                                            <td><div class="td-content product-brand text-primary">@item.CustomerDto.Name</div></td>
+                                            <td><div class="td-content product-invoice">@item.CustomerDto.CustomerTypeDto.Name</div></td>
+                                            <td><div class="td-content pricing"><span class="">@item.OrderTotalPrice</span></div></td>
+
+                                        </tr>
+                                    }
+                                }
+                               
+
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <div class="widget widget-table-three">
+
+                <div class="widget-heading">
+                    <h5 class="">Bugün Çok Satanlar</h5>
+                </div>
+
+                <div class="widget-content">
+                    <div class="table-responsive">
+                        <table class="table table-scroll">
+                            <thead>
+                                <tr>
+                                    <th><div class="th-content">Ürün</div></th>
+                                    <th><div class="th-content">Alt Tipi</div></th>
+                                    <th><div class="th-content">Tipi</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            @if (Model.TopSeller!=null)
+                                {  
+                                    foreach (var item in Model.TopSeller)
+                                    {
+                                        <tr>
+                                            <td><div class="td-content product-brand text-primary">@item.Name</div></td>
+                                            <td><div class="td-content product-invoice">@item.SubProductTypeDto.Name</div></td>
+                                            <td><div class="td-content pricing"><span class="">@item.SubProductTypeDto.ProductTypeDto.Name</span></div></td>
+                                        </tr>
+
+                                            }
+
+                                      
+
+                                }
+                             
+                              
+                               
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
+                            <div class="widget widget-activity-five">
+
+                                <div class="widget-heading">
+                                    <h5 class="">Bugün Rotalar</h5>
+
+                                    <div class="task-action">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" id="activitylog" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                            </a>
+
+                                            <div class="dropdown-menu left" aria-labelledby="activitylog" style="will-change: transform;">
+                                                <a class="dropdown-item" href="/Route/Index">Hepsi</a>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="widget-content">
+
+                                    <div class="w-shadow-top"></div>
+
+                                    <div class="mt-container mx-auto">
+                                        <div class="timeline-line">
+
+
+                                        @if (Model.TodayFiveRouteCustomer!=null)
+                            {
+                                foreach (var item in Model.TodayFiveRouteCustomer)
+                                {
+                                    <div class="item-timeline timeline-new">
+                                        <div class="t-dot">
+                                            <div class="t-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                                        </div>
+                                        <div class="t-content">
+                                            <div class="t-uppercontent">
+                                                <h5>@item</h5>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                }
+                               
+
+                            }
+                                           
+
+                                                                 
+                                        </div>                                    
+                                    </div>
+
+                                    <div class="w-shadow-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+              
+
+                    </div>
+
+                    </div>

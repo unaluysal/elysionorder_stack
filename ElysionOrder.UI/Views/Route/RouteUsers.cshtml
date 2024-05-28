@@ -1,0 +1,116 @@
+﻿@model IEnumerable<ElysionOrder.Application.Services.Dtos.RouteUserDto>
+
+@{
+    ViewData["Title"] = "Kullanıcılar";
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/src/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/custom_dt_custom.css">
+
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/custom_dt_custom.css">
+
+
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+}
+
+<div class="middle-content container-xxl p-0">
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Analytics">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="Route/RouteUsers">Rota Kullanıcıları</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Hepsi</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+
+    <div class="seperator-header layout-top-spacing">
+        <h4 class="">Rota Kullanıcıları</h4>
+
+
+    </div>
+    <a href="/Route/AddRouteUser">
+        <span class="shadow-none badge badge-primary">Yeni Ekle</span>
+
+    </a>
+
+    <div class="row layout-spacing">
+        <div class="col-lg-12">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <table id="style-3" class="table style-3 dt-table-hover">
+                        <thead>
+                            <tr>
+                                
+
+                                <th>İsim</th>
+                                <th>Soyisim</th>
+                                <th>Görevi</th>
+                                <th>Rota Adı</th>
+                                <th class="text-center">Durum</th>
+                                <th class="text-center dt-no-sorting">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                   
+
+                                        <td> @Html.DisplayFor(modelItem => item.UserDto.Name)</td>
+                                        <td> @Html.DisplayFor(modelItem => item.UserDto.LastName)</td>
+                                        <td> @Html.DisplayFor(modelItem => item.UserDto.UserTypeDto.Name)</td>
+                                        <td> @Html.DisplayFor(modelItem => item.RouteDto.Name)</td>
+                                        <td class="text-center">@Html.DisplayFor(modelItem => item.Status)</td>
+                                       
+                                        <td class="text-center">
+                                            <div class="action-btns">
+
+
+                                                <a href="/Route/DeleteRouteUser/@item.Id" class="action-btn btn-delete bs-tooltip" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                                </a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                }
+
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

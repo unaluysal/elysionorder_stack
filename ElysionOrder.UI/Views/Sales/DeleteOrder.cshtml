@@ -1,0 +1,113 @@
+﻿@model ElysionOrder.Application.Services.Dtos.OrderDto
+
+@{
+    ViewBag.Title = "Satış Kalemi Sil";
+}
+
+
+
+<div class="middle-content container-xxl p-0">
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Analytics">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Sales/DeleteOrder">Satış Kalemi</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Sil</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+
+    <div class="seperator-header layout-top-spacing">
+        <h4 class="">Satış Kalemi Sil</h4>
+   
+       
+
+
+    </div>
+
+    @using (Html.BeginForm("DeleteOrder", "Sales"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Satış Id</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SalesId, new { htmlAttributes = new { @class = "form-control", disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.SalesId, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.SalesId)
+                </div>
+            </div>
+            <br />
+          @*  <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">s
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Ürün Adı</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model, new { htmlAttributes = new { @class = "form-control",  disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.PriceListDto.ProductDto.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Adet</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Piece, new { htmlAttributes = new { @class = "form-control",  disabled = "true" } })
+                    @Html.ValidationMessageFor(model => model.Piece, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Sil" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    }
+ 
+  
+
+</div>

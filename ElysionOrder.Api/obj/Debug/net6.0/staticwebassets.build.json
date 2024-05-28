@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BzVc+WIXJBiwt6tdkky1MLLYHp8Wdy2/OE5B0geUgeE=",
+  "Source": "ElysionOrder.Api",
+  "BasePath": "_content/ElysionOrder.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

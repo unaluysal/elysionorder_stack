@@ -1,0 +1,17 @@
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Infrastructure.Data.deps.json
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Infrastructure.Data.runtimeconfig.json
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Infrastructure.Data.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Infrastructure.Data.pdb
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Domain.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\bin\Release\net6.0\ElysionOrder.Domain.pdb
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.csproj.AssemblyReference.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.AssemblyInfo.cs
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.csproj.CoreCompileInputs.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.csproj.CopyComplete
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\refint\ElysionOrder.Infrastructure.Data.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.pdb
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ElysionOrder.Infrastructure.Data.genruntimeconfig.cache
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Infrastructure.Data\obj\Release\net6.0\ref\ElysionOrder.Infrastructure.Data.dll

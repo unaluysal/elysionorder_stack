@@ -1,0 +1,217 @@
+﻿@model ElysionOrder.Application.Services.Dtos.SalesDto
+
+@{
+    ViewData["Title"] = "Satış Detay";
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/src/table/datatable/datatables.css">
+
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/custom_dt_miscellaneous.css">
+
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/custom_dt_miscellaneous.css">
+
+    <!-- END PAGE LEVEL STYLES -->
+}
+
+<div class="middle-content container-xxl p-0">
+
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Analytics">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Sales/Detail"> Satış </a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Detay</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+    <div class="row invoice layout-top-spacing layout-spacing">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+            <div class="doc-container">
+
+                <div class="row">
+
+                    <div class="col-xl-12">
+
+                        <div class="invoice-container">
+                            <div class="invoice-inbox">
+
+                                <div id="ct" class="">
+
+                                    <div class="invoice-00001">
+                                        <div class="content-section">
+
+                                            <div class="inv--head-section inv--detail-section">
+
+                                                <div class="row">
+
+                                                    <div class="col-sm-12 col-12 mr-auto">
+                                                       
+                                                        <p class="inv-street-addr mt-3"><strong> Müşteri :  @Model.CustomerDto.Name</strong></p>
+                                                        <p class="inv-street-addr mt-3"><strong>Başlama :  @Model.CreateTime </strong></p>
+                                                        <p class="inv-street-addr mt-3"><strong>Durum :  @Model.SalesStatusDto.Name </strong></p>
+                                                        <p class="inv-street-addr mt-3"><strong>İşlemi Başlatan : <span>@Model.CreateUserDto.Name </span><span>  @Model.CreateUserDto.LastName</span> </strong> </p>
+                                                        <p class="inv-street-addr mt-3"><strong>Son İşlem Yapan : <span> @Model.UpdateUserDto.Name  </span><span>  @Model.UpdateUserDto.LastName </span> </strong></p>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="inv--detail-section inv--customer-detail-section">
+                                            </div>
+
+                                            <div class="inv--product-table-section">
+                                                <div class="table-responsive">
+                                                    <br />
+                                                    <h5 class="" style="color:orangered">Ekli Ürünler</h5>
+                                                    <br />
+                                                    <table class="table">
+                                                        <thead class="">
+                                                            <tr>
+
+                                                                <th scope="col">Oluşturma Tarihi</th>
+                                                                <th scope="col">Ürün</th>
+                                                                <th scope="col">Fiyatı</th>
+                                                                <th scope="col">İskonto Oranı</th>
+                                                                <th scope="col">Özel Fiyat</th>
+                                                                <th scope="col">Adet</th>
+                                                                <th scope="col">Vergi Tipi</th>
+                                                                <th scope="col">Tutar</th>
+                                                                <th scope="col">Vergi</th>
+                                                                <th scope="col">Vergi Dahil Tutar</th>
+                                                                <th scope="col">Para Birimi</th>
+
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (Model != null)
+                                                            {
+                                                                if (Model.OrderDtos != null)
+                                                                {
+                                                                    foreach (var item in Model.OrderDtos)
+                                                                    {
+
+                                                                        <tr>
+
+                                                                            <td>@item.CreateTime</td>
+                                                                            <td>@item.ProductDto.Name</td>
+                                                                            <td>@item.ProductDto.Price</td>
+                                                                            <td>@item.Discount</td>
+                                                                            <td>@item.SpecialPrice</td>
+                                                                            <td>@item.Piece</td>
+                                                                            <td>@item.ProductDto.TaxDto.Name</td>
+                                                                            <td>@item.OrderTotalPrice </td>
+                                                                            <td>@item.OrderTotalTax</td>
+                                                                            <td>@item.OrderTotalPriceWithTax </td>
+                                                                            <td>@item.ProductDto.CurrencyDto.Name</td>
+
+
+
+
+                                                                        </tr>
+                                                                    }
+
+                                                                }
+
+                                                            }
+
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="inv--note text-end">
+
+                                                <div class="row mt-5">
+                                                    <div class="col-sm-12 col-12 order-sm-0 order-1">
+                                                        <h5>Toplam Tutar : <strong> @Model.OrderTotalTaxFreePrice</strong> </h5>
+                                                    </div>
+                                                    <div class="col-sm-12 col-12 order-sm-0 order-1">
+                                                        <h5>Toplam Vergi :<strong>@Model.OrderTotalTax </strong> </h5>
+                                                    </div>
+                                                    <div class="col-sm-12 col-12 order-sm-0 order-1">
+                                                        <h5>Toplam Tutar :<strong> @Model.OrderTotalPrice</strong> </h5>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3">
+
+                        <div class="invoice-actions-btn">
+
+                            <div class="invoice-action-btn">
+
+                                <div class="row">
+                                    @if (Model.SalesStatusDto.LineNumber != 0 && Model.SalesStatusDto.LineNumber != 5)
+                                    {
+                                        <div class="col-xl-12 col-md-3 col-sm-6">
+                                            <a href="/Sales/Delete/@Model.Id" class="btn btn-danger mb-2 me-4">Sil</a>
+                                        </div>
+                                        <br />
+                                        <div class="col-xl-12 col-md-3 col-sm-6">
+                                            <a href="/Sales/SalesNext/@Model.Id" class="btn btn-success mb-2 me-4">Düzenle</a>
+                                        </div>
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+

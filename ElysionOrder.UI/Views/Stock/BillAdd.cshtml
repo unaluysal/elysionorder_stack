@@ -1,0 +1,151 @@
+﻿@model ElysionOrder.Application.Services.Dtos.BillDto
+
+@{
+    ViewData["Title"] = "Stok Giriş";
+
+
+}
+
+
+
+<div class="middle-content container-xxl p-0">
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Analytics">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Stock/BillAdd">Stoklar</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Giriş</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+
+    <div class="seperator-header layout-top-spacing">
+        <h4 class="">Stok Girişi</h4>
+
+
+    </div>
+
+    @using (Html.BeginForm("BillAdd", "Stock"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Faturayı Kesen</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model=>model.InvoicerId, new SelectList(ViewBag.Customers, "Value", "Text"), htmlAttributes: new { @class = "form-control form-control-lg" })
+                    @Html.ValidationMessageFor(model => model.InvoicerId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Fatura Tarihi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+
+                    @Html.EditorFor(model=>model.BillDate, new { htmlAttributes = new {   @class = "form-control flatpickr flatpickr-input active", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.BillDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Sevk Tarihi</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model=>model.ShipmentDate, new { htmlAttributes = new {   @class = "form-control flatpickr flatpickr-input active", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.ShipmentDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>Fatura Numarası</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BillNumber, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.BillNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h5>İrsaliye Numarası</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.WayBillNumber, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.WayBillNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+           
+
+
+           
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Devam" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <div>
+        @Html.ActionLink("Stoklar", "Index","Stock")
+    </div>
+
+</div>
+
+
+

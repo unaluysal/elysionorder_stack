@@ -1,0 +1,121 @@
+﻿@model IEnumerable<ElysionOrder.Application.Services.Dtos.SalesDto>
+
+@{
+    ViewData["Title"] = "Siparişler";
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/src/table/datatable/datatables.css">
+
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/light/table/datatable/custom_dt_miscellaneous.css">
+
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/dt-global_style.css">
+    <link rel="stylesheet" type="text/css" href="~/src/plugins/css/dark/table/datatable/custom_dt_miscellaneous.css">
+
+    <!-- END PAGE LEVEL STYLES -->
+}
+
+<div class="middle-content container-xxl p-0">
+
+    <!--  BEGIN BREADCRUMBS  -->
+    <div class="secondary-nav">
+        <div class="breadcrumbs-container" data-page-heading="Siparişler">
+            <header class="header navbar navbar-expand-sm">
+                <a href="javascript:void(0);" class="btn-toggle sidebarCollapse" data-placement="bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </a>
+                <div class="d-flex breadcrumb-content">
+                    <div class="page-header">
+
+                        <div class="page-title">
+                        </div>
+
+                        <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Sales/Index">Siparişler</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Hepsi</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <!--  END BREADCRUMBS  -->
+
+
+
+    <div class="seperator-header layout-top-spacing">
+        <h4 class="">Siparişler</h4>
+
+
+    </div>
+    <a href="/Sales/Add">
+        <span class="shadow-none badge badge-primary">Yeni Ekle</span>
+
+    </a>
+
+
+    <div class="row">
+
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <table id="html5-extension" class="table dt-table-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                              
+                                <th>Oluşturma</th>
+                                <th>Müşteri</th>
+                                <th>Toplam</th>
+                                <th>Durum</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                    
+                                    
+                                        <td>@Html.DisplayFor(modelItem => item.CreateTime)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.CustomerDto.Name)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.OrderTotalPrice)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.SalesStatusDto.Name)</td>
+                                      
+                                         <td class="text-center">
+
+                                            @if (item.SalesStatusDto.LineNumber != 0 && item.SalesStatusDto.LineNumber != 5)
+                                            {
+                                                <a href="/Sales/Action/@item.Id" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Aksiyon" data-original-title="Aksiyon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat p-1 br-8 mb-1"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
+
+                                                <a href="/Sales/Delete/@item.Id" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Sil" data-original-title="Sil"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-8 mb-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></a>
+
+
+                                            }
+                                              <a href="/Sales/Detail/@item.Id" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Detay" data-original-title="Detay"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info p-1 br-8 mb-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></a>
+                                            <a href="/Bill/Detail/@item.Id" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Fatura" data-original-title="Fatura"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign p-1 br-8 mb-1"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></a>
+                                          
+                                        </td>
+
+                                      
+
+                                    </tr>
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+

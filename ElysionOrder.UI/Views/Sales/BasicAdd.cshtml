@@ -1,0 +1,55 @@
+﻿@model ElysionOrder.Application.Services.Dtos.SalesDto
+
+@{
+    ViewData["Title"] = "Satış Başlat";
+
+ 
+}
+
+
+
+
+<div class="order-form">
+    <h2>Sipariş Ekleme</h2>
+    <br />
+    <div class="form-group">
+        <label for="customer">Müşteri Seç:</label>
+        <select id="customer" name="customer">
+            <option value="">--Müşteri Seç--</option>
+            @foreach (var customer in ViewBag.Customers)
+            {
+                <option value="@customer.Value">@customer.Text</option>
+            }
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="product">Ürün Seç:</label>
+        <select id="product" name="product">
+            <option value="">--Ürün Seç--</option>
+            @foreach (var prodcut in ViewBag.Porducts)
+            {
+                <option value="@prodcut.Value">@prodcut.Text</option>
+            }
+
+            }
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="quantity">Miktar:</label>
+        <input type="number" id="quantity" name="quantity" min="1">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="price">Birim Fiyatı:</label>
+        <input type="text" id="price" name="price">
+    </div>
+   
+    <br />
+    <div class="form-buttons">
+        <button type="submit">Ekle</button>
+        <button type="reset">Temizle</button>
+        <button type="button">İptal</button>
+    </div>
+</div>

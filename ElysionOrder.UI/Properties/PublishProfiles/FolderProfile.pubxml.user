@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2024-01-25T22:34:27.6676949Z;True|2023-12-11T20:56:43.2851300+03:00;True|2023-11-21T17:33:51.1213511+03:00;True|2023-11-21T17:32:29.3655407+03:00;True|2023-11-21T16:14:06.4824284+03:00;True|2023-11-16T09:15:00.5273342+03:00;True|2023-11-15T17:08:36.5811382+03:00;True|2023-11-10T00:47:18.0783995+03:00;True|2023-11-10T00:37:57.9741889+03:00;True|2023-09-07T16:05:45.0092175+03:00;True|2023-07-08T16:02:16.4154870+03:00;True|2023-06-23T17:45:37.3516324+03:00;True|2023-06-23T15:07:36.1288935+03:00;True|2023-06-23T12:20:22.3295783+03:00;True|2023-06-23T12:20:06.5339414+03:00;True|2023-06-13T16:18:19.7716431+03:00;True|2023-06-13T10:51:45.1125727+03:00;True|2023-05-13T17:39:28.1271175+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

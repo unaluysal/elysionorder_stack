@@ -1,0 +1,553 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ElysionOrder.UI
+build_property.RootNamespace = ElysionOrder.UI
+build_property.ProjectDir = C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/AddDebt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxBZGREZWJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/AddPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxBZGRQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/BillSettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxCaWxsU2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/EditSetting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxFZGl0U2V0dGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/PrintBill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxQcmludEJpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/SendEBill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxTZW5kRUJpbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Company/EBillSettingEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFQmlsbFNldHRpbmdFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Company/EBillSettingIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFQmlsbFNldHRpbmdJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/AddType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/DeleteType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/EditType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdFR5cGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Customer/Type.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/AddType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/DeleteType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxEZWxldGVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/EditType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFZGl0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Expense/Types.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxUeXBlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddBrand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRCcmFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddCurrency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRDdXJyZW5jeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddIban.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRJYmFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddPriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRQcmljZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddSubType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRTdWJUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddTax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRUYXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Brand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxCcmFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Currency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDdXJyZW5jeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteBrand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVCcmFuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteCurrency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVDdXJyZW5jeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteIban.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVJYmFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeletePriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVQcmljZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteSubType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVTdWJUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteTax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVUYXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditBrand.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0QnJhbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditCurrency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0Q3VycmVuY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditIban.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0SWJhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditSubType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0U3ViVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditTax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0VGF4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/EditType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Iban.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJYmFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/PriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcmljZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/ProductPriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UHJpY2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/ProductType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/SubProductType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTdWJQcm9kdWN0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Tax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxUYXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/AddRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XEFkZFJpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XEFkZFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/DeleteRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XERlbGV0ZVJpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/DeleteRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XERlbGV0ZVJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/Right.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XFJpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/RoleRight/Role.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVJpZ2h0XFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/AddRouteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcQWRkUm91dGVDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/AddRouteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcQWRkUm91dGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/DeleteRouteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcRGVsZXRlUm91dGVDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/DeleteRouteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcRGVsZXRlUm91dGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/RouteCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcUm91dGVDdXN0b21lcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Route/RouteUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm91dGVcUm91dGVVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Action.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Active.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWN0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/AddOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWRkT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/AddSalesStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQWRkU2FsZXNTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/BackStepSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQmFja1N0ZXBTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/DeleteOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRGVsZXRlT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/DeleteSalesStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRGVsZXRlU2FsZXNTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/NextStepSales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcTmV4dFN0ZXBTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Passive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcUGFzc2l2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/SalesNext.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcU2FsZXNOZXh0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/SalesStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcU2FsZXNTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/AddBillItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQWRkQmlsbEl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/AddStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQWRkU3RvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/AddStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQWRkU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/AddStoreType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQWRkU3RvcmVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/BillAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQmlsbEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/BillDone.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQmlsbERvbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/BillItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcQmlsbEl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/DeleteBill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRGVsZXRlQmlsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/DeleteBillItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRGVsZXRlQmlsbEl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/DeleteStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRGVsZXRlU3RvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/DeleteStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRGVsZXRlU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/DeleteStoreType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRGVsZXRlU3RvcmVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/EditStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRWRpdFN0b2NrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/EditStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRWRpdFN0b3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/EditStoreType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRWRpdFN0b3JlVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/Stores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcU3RvcmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Stock/StoreTypes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcU3RvcmVUeXBlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/AddType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/AddUserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRVc2VyUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/DeleteType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/DeleteUserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGVVc2VyUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/EditType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/UserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/User/UserType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lmwrbin0ww
