@@ -1,4 +1,4 @@
-﻿using EFaturaEDMTest;
+﻿using EFaturaEdm;
 using ElysionOrder.Domain.Entitys;
 using ElysionOrder.Infrastructure.Data.UnitOfWork;
 using System.Xml.Serialization;
@@ -25,11 +25,11 @@ namespace ElysionOrder.Application.Services.Helpers
             string res = "";
             if (_company.EBillRole == "TEST")
             {
-                EFaturaEDMTest.EFaturaEDMPortClient client = new EFaturaEDMTest.EFaturaEDMPortClient();
+                EFaturaEdm.EFaturaEDMPortClient client = new EFaturaEdm.EFaturaEDMPortClient();
 
 
-                EFaturaEDMTest.LoginRequest loginRequest = new EFaturaEDMTest.LoginRequest();
-                EFaturaEDMTest.REQUEST_HEADERType header = new EFaturaEDMTest.REQUEST_HEADERType();
+                EFaturaEdm.LoginRequest loginRequest = new EFaturaEdm.LoginRequest();
+                EFaturaEdm.REQUEST_HEADERType header = new EFaturaEdm.REQUEST_HEADERType();
 
                
 
@@ -70,7 +70,7 @@ namespace ElysionOrder.Application.Services.Helpers
             {
                 if (_company.EBillRole == "TEST")
                 {
-                    EFaturaEDMTest.EFaturaEDMPortClient client = new EFaturaEDMTest.EFaturaEDMPortClient();
+                    EFaturaEdm.EFaturaEDMPortClient client = new EFaturaEdm.EFaturaEDMPortClient();
                     //test olduğunda bu bilgiler edm olmalı, servis böyle çalışıyor
 
 
@@ -79,7 +79,7 @@ namespace ElysionOrder.Application.Services.Helpers
 
                     _company.Name = "2018 & EDM BILISIM SISTEMLERI VE DANISMANLIK HIZMETLERI ANONIM SIRKETI";
                     _company.TaxNumber = "3230512384";
-                    EFaturaEDMTest.REQUEST_HEADERType header = new EFaturaEDMTest.REQUEST_HEADERType();
+                    EFaturaEdm.REQUEST_HEADERType header = new EFaturaEdm.REQUEST_HEADERType();
                     header.ACTION_DATE = DateTime.Now;
                     header.ACTION_DATESpecified = true;
                     header.CLIENT_TXN_ID = Guid.NewGuid().ToString();
@@ -90,7 +90,7 @@ namespace ElysionOrder.Application.Services.Helpers
                     header.COMPRESSED = _eBillSetting.Compressed;
                     header.SESSION_ID = token;
 
-                    EFaturaEDMTest.SendInvoiceRequest req = new EFaturaEDMTest.SendInvoiceRequest();
+                    EFaturaEdm.SendInvoiceRequest req = new EFaturaEdm.SendInvoiceRequest();
                     req.REQUEST_HEADER = header;
 
 
@@ -104,7 +104,7 @@ namespace ElysionOrder.Application.Services.Helpers
 
 
 
-                    EFaturaEDMTest.INVOICE inovice = new EFaturaEDMTest.INVOICE();
+                    EFaturaEdm.INVOICE inovice = new EFaturaEdm.INVOICE();
                  
 
 
@@ -287,7 +287,7 @@ namespace ElysionOrder.Application.Services.Helpers
                     }
 
 
-                    EFaturaEDMTest.base64Binary bd = new base64Binary();
+                    EFaturaEdm.base64Binary bd = new base64Binary();
                     bd.Value = xmlBytes;
                     inovice.CONTENT = bd;
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElysionOrder.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c321416f27322ee8bd71cef78109758458a5ac4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElysionOrder.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElysionOrder.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

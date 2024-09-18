@@ -122,6 +122,9 @@ namespace ElysionOrder.Application.Services.Mapping
                     t.CustomerDto.Id = s.CustomerId;
                     t.CustomerDto.Name = s.Customer.Name ;
                     t.CustomerDto.Description = s.Customer.Description;
+                    t.CustomerDto.TaxNumber = s.Customer.TaxNumber;
+                    t.CustomerDto.TaxOffice = s.Customer.TaxOffice;
+                    t.CustomerDto.BillingAddRess = s.Customer.BillingAddRess;
                     t.CustomerDto.Status = s.Customer.Status;
 
                     if (s.Customer.CustomerType != null)

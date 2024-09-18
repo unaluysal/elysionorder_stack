@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElysionOrder.Application.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b37baae3eef9281b26d232a3d6e865d05d8986b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c321416f27322ee8bd71cef78109758458a5ac4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElysionOrder.Application.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElysionOrder.Application.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

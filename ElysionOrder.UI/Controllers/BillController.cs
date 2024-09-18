@@ -10,14 +10,16 @@ namespace ElysionOrder.UI.Controllers
     public class BillController : Controller
     {
 
-        readonly IBillService _billService;
-        readonly ICustomerService _customerService;
+        private readonly IBillService _billService;
+        private readonly ICustomerService _customerService;
+        private readonly IPaymentService _paymentService;
 
-        public BillController(IBillService billService, ICustomerService customerService)
+        public BillController(IBillService billService, ICustomerService customerService, IPaymentService paymentService)
         {
 
             _billService = billService;
             _customerService = customerService;
+            _paymentService = paymentService;   
         }
 
 
@@ -38,8 +40,8 @@ namespace ElysionOrder.UI.Controllers
         [Authorize(Roles = "Bill_View")]
         public async Task<IActionResult> Detail(Guid id)
         {
-           
-            var b =await _billService.GetBillSettingWithIdAsync(id);
+
+            var b = await _billService.GetBillSettingWithIdAsync(id);
             return View(b);
         }
 
@@ -86,7 +88,7 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> AddPayment(Guid id)
         {
 
-            var list = await _billService.GetAllPaymentWaysAsync();
+            var list = await _paymentService.GetAllPaymentWaysAsync();
 
             List<SelectListItem> pw = new List<SelectListItem>();
 
@@ -111,7 +113,7 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> AddPayment(PaymentDto paymentDto)
         {
 
-            await _billService.AddPaymentAsync(paymentDto);
+            await _paymentService.AddPaymentAsync(paymentDto);
 
             return RedirectToAction("Detail", "Customer", new { id = paymentDto.CustomerId });
 
@@ -120,7 +122,7 @@ namespace ElysionOrder.UI.Controllers
         [Authorize(Roles = "Bill_AddDebt")]
         public async Task<IActionResult> AddDebt(Guid id)
         {
-            var list = await _billService.GetAllPaymentWaysAsync();
+            var list = await _paymentService.GetAllPaymentWaysAsync();
 
             List<SelectListItem> pw = new List<SelectListItem>();
 
@@ -144,7 +146,7 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> AddDebt(PaymentDto paymentDto)
         {
 
-            await _billService.AddDebtAsync(paymentDto);
+            await _paymentService.AddDebtAsync(paymentDto);
 
             return RedirectToAction("Detail", "Customer", new { id = paymentDto.CustomerId });
 
@@ -175,6 +177,15 @@ namespace ElysionOrder.UI.Controllers
 
 
         //}
+
+
+
+        public async Task<IActionResult> EdmTest()
+        {
+
+            await _billService.SendInvoiceAsync(Guid.Parse("42fc5092-d9c1-4516-ba35-1d23662255f6"));
+            return View();
+        }
 
     }
 }

@@ -247,7 +247,10 @@
       "System.Text.Encodings.Web/4.5.0": {},
       "ElysionOrder.Domain/1.0.0": {
         "runtime": {
-          "ElysionOrder.Domain.dll": {}
+          "ElysionOrder.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

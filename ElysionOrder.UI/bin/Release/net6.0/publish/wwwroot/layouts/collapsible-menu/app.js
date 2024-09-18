@@ -1,4 +1,4 @@
-5var App = function() {
+var App = function() {
     var MediaSize = {
         xl: 1200,
         lg: 992,

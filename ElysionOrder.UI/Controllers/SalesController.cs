@@ -17,8 +17,9 @@ namespace ElysionOrder.UI.Controllers
         readonly IPriceService _priceService;
         readonly IStockService _stockService;
         readonly IProductService _productService;
+        readonly IBillService _billService;
         public SalesController(ISalesService salesService, ICustomerService customerService, IOrderService orderService,
-            IPriceService priceService, IStockService stockService, IProductService productService)
+            IPriceService priceService, IStockService stockService, IProductService productService, IBillService billService)
         {
 
             _salesService = salesService;
@@ -27,13 +28,14 @@ namespace ElysionOrder.UI.Controllers
             _priceService = priceService;
             _stockService = stockService;
             _productService = productService;
+            _billService = billService;
         }
         #region Sales
 
         [Authorize(Roles = "Sales_View")]
         public async Task<IActionResult> Index()
         {
-            var list =await _salesService.GetAllSalesesAsync();
+            var list = await _salesService.GetAllSalesesAsync();
             return View(list);
         }
 
@@ -55,7 +57,7 @@ namespace ElysionOrder.UI.Controllers
         [Authorize(Roles = "Sales_Add")]
         public async Task<IActionResult> Add()
         {
-            var customer =await _customerService.GetAllCustomersAsync();
+            var customer = await _customerService.GetAllCustomersAsync();
             List<SelectListItem> cust = new List<SelectListItem>();
 
             foreach (var item in customer)
@@ -64,7 +66,7 @@ namespace ElysionOrder.UI.Controllers
             }
             ViewBag.Customers = cust;
 
-           
+
 
             return View();
         }
@@ -72,7 +74,7 @@ namespace ElysionOrder.UI.Controllers
         [Authorize(Roles = "Sales_Add")]
         public async Task<IActionResult> BasicAdd()
         {
-            var customer =await _customerService.GetAllCustomersAsync();
+            var customer = await _customerService.GetAllCustomersAsync();
             List<SelectListItem> cust = new List<SelectListItem>();
 
             foreach (var item in customer)
@@ -85,26 +87,48 @@ namespace ElysionOrder.UI.Controllers
 
             var products = await _productService.GetAllProductsIfHaveStockAsync();
 
-            List<SelectListItem> prod = new List<SelectListItem>();
 
-            foreach (var item in products)
-            {
-                prod.Add(new SelectListItem { Text = item.Name + " "+item.Price+" " + item.CurrencyDto.Name, Value = item.Id.ToString() });
-            }
-            ViewBag.Porducts = prod;
+            ViewBag.Products = products;
 
             return View();
         }
 
+        [Authorize(Roles = "Sales_Add")]
+        [HttpPost]
+        public async Task<IActionResult> BasicAdd(BasicOrderDto basicOrderDto)
+        {
+            var customer = await _customerService.GetAllCustomersAsync();
+            List<SelectListItem> cust = new List<SelectListItem>();
+
+            foreach (var item in customer)
+            {
+                cust.Add(new SelectListItem { Text = item.Name + " " + item.CustomerNumber, Value = item.Id.ToString() });
+            }
+            ViewBag.Customers = cust;
+
+
+
+            var products = await _productService.GetAllProductsIfHaveStockAsync();
+
+
+            ViewBag.Products = products;
+
+            var resp = await _salesService.CreateBasicSalesAsync(basicOrderDto);
+
+
+            return RedirectToAction("Detail", new { id = resp.Id });
+
+
+        }
 
         [Authorize(Roles = "Sales_Add")]
         [HttpPost]
         public async Task<IActionResult> Add(SalesDto salesDto)
         {
-           
-           var cr =await _salesService.CreateSalesAsync(salesDto);
 
-            return RedirectToAction("SalesNext","Sales",new { id = cr.Id });
+            var cr = await _salesService.CreateSalesAsync(salesDto);
+
+            return RedirectToAction("SalesNext", "Sales", new { id = cr.Id });
         }
 
 
@@ -112,16 +136,16 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> Action(Guid id)
         {
             var sales = await _salesService.GetSalesByIdWithStepsAsync(id);
-        
-            
+
+
 
 
             return View(sales);
         }
 
-        
 
-       
+
+
 
 
         [Authorize(Roles = "Sales_Action")]
@@ -129,21 +153,22 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> NextStepSales(SalesDto salesDto)
         {
 
-           var res = await _salesService.SetSalesNextStepAsync(salesDto);
-            if (res==-1)
+            var res = await _salesService.SetSalesNextStepAsync(salesDto);
+            if (res == -1)
             {
-              return  RedirectToAction("Error", "Home");
+                return RedirectToAction("Error", "Home");
             }
-            else if (res==5)
+            else if (res == 5)
             {
-               return RedirectToAction("Index", "Sales");
+               await _billService.SendInvoiceAsync(salesDto.Id);
+                return RedirectToAction("Index", "Sales");
             }
 
             return RedirectToAction("Action", "Sales", new { id = salesDto.Id });
         }
 
 
-       
+
 
 
         [Authorize(Roles = "Sales_Action")]
@@ -168,24 +193,24 @@ namespace ElysionOrder.UI.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var sales = await _salesService.GetSalesWithIdAsync(id);
-           
+
 
 
             return View(sales);
         }
 
         [Authorize(Roles = "Sales_Edit")]
-        
+
         public async Task<IActionResult> Edit(Guid id)
         {
-          
 
-            var sales =await _salesService.GetSalesWithIdAsync(id);
-            
+
+            var sales = await _salesService.GetSalesWithIdAsync(id);
+
 
             return View(sales);
         }
-        
+
 
         [Authorize(Roles = "Sales_Delete")]
         [HttpPost]
@@ -197,7 +222,7 @@ namespace ElysionOrder.UI.Controllers
             return RedirectToAction("Index", "Sales");
         }
         [Authorize(Roles = "Sales_Next")]
-        public async Task<IActionResult> SalesNext(Guid id,string message)
+        public async Task<IActionResult> SalesNext(Guid id, string message)
         {
             if (!String.IsNullOrEmpty(message))
             {
@@ -209,12 +234,12 @@ namespace ElysionOrder.UI.Controllers
             foreach (var item in prds)
             {
                 pr.Add(new SelectListItem { Text = item.Name + " " + item.Price + " " + item.CurrencyDto.Name, Value = item.Id.ToString() });
-            } 
+            }
 
             ViewBag.Products = pr;
 
-            var sales =await _salesService.GetSalesWithIdAsync(id);
-            
+            var sales = await _salesService.GetSalesWithIdAsync(id);
+
             return View(sales);
         }
 
@@ -222,12 +247,12 @@ namespace ElysionOrder.UI.Controllers
 
         #region Order
 
-        [Authorize(Roles ="Order_Add")]
+        [Authorize(Roles = "Order_Add")]
         [HttpPost]
         public async Task<ActionResult> AddOrder(OrderDto orderDto)
         {
-     
-            
+
+
             var res = await _stockService.CanBeOrderAsync(orderDto.ProductId, orderDto.Piece);
             if (res == false)
             {
@@ -239,25 +264,25 @@ namespace ElysionOrder.UI.Controllers
 
             }
 
-            await  _orderService.AddOrderAsync(orderDto);
+            await _orderService.AddOrderAsync(orderDto);
             return RedirectToAction("SalesNext", "Sales", new { id = orderDto.SalesId });
 
         }
 
         [Authorize(Roles = "Order_Delete")]
-      
+
         public async Task<ActionResult> DeleteOrder(Guid id)
         {
-           var ao = await _orderService.GetOrderWithIdAsync(id);
+            var ao = await _orderService.GetOrderWithIdAsync(id);
             return View(ao);
 
         }
 
-        [Authorize(Roles ="Order_Delete")]
+        [Authorize(Roles = "Order_Delete")]
         [HttpPost]
         public async Task<ActionResult> DeleteOrder(OrderDto orderDto)
         {
-           await _orderService.DeleteOrderAsync(orderDto.Id);
+            await _orderService.DeleteOrderAsync(orderDto.Id);
             return RedirectToAction("SalesNext", "Sales", new { id = orderDto.SalesId });
 
         }
@@ -283,7 +308,7 @@ namespace ElysionOrder.UI.Controllers
         [Authorize(Roles = "SalesStatus_Delete")]
         public async Task<IActionResult> DeleteSalesStatus(Guid id)
         {
-            var status =await _salesService.GetSalesStatusWithIdAsync(id);
+            var status = await _salesService.GetSalesStatusWithIdAsync(id);
             return View(status);
         }
         [Authorize(Roles = "SalesStatus_Delete")]

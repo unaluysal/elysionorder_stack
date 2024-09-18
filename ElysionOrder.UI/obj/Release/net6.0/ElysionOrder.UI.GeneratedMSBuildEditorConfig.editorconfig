@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ElysionOrder.UI
 build_property.RootNamespace = ElysionOrder.UI
 build_property.ProjectDir = C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -34,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/EditSetting.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxFZGl0U2V0dGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/EdmTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFxFZG1UZXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Bill/Index.cshtml]
@@ -160,10 +166,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRJYmFuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddPriceList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRQcmljZUxpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/AddSubType.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRTdWJUeXBlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,10 +200,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteIban.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVJYmFuLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeletePriceList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVQcmljZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/DeleteSubType.cshtml]
@@ -250,14 +248,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/PriceList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcmljZUxpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/ProductPriceList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0UHJpY2VMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Product/ProductType.cshtml]
@@ -370,6 +360,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/BackStepSales.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQmFja1N0ZXBTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/BasicAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZXNcQmFzaWNBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Unal/Desktop/Projeler/ElysionOrder/ElysionOrder.UI/Views/Sales/Delete.cshtml]

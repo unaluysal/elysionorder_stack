@@ -333,7 +333,15 @@ namespace ElysionOrder.Infrastructure.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("District")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("EBillRole")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Mail")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -643,6 +651,10 @@ namespace ElysionOrder.Infrastructure.Data.Migrations
                     b.Property<Guid?>("UpdateUserId")
                         .HasColumnType("uuid")
                         .HasColumnOrder(5);
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("UserName")
                         .IsRequired()

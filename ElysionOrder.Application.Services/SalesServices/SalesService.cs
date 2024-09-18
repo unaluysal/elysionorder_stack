@@ -14,22 +14,22 @@ namespace ElysionOrder.Application.Services.SalesServices
         readonly IMapper _mapper;
         readonly IOrderService _orderService;
         readonly IUserService _userService;
-        readonly IBillService _billService;
+        readonly IPaymentService _paymentService;
 
-        public SalesService(IUnitOfWork unitOfWork, IMapper mapper, IOrderService orderService, IUserService userService, IBillService billService)
+        public SalesService(IUnitOfWork unitOfWork, IMapper mapper, IOrderService orderService, IUserService userService, IPaymentService paymentService)
         {
 
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _orderService = orderService;
             _userService = userService;
-            _billService = billService;
+            _paymentService = paymentService;
 
         }
         public async Task AddSalesAsync(SalesDto salesDto)
         {
             var sales = _mapper.Map<Sales>(salesDto);
-           
+
             sales.Id = Guid.NewGuid();
             await _unitOfWork.GetRepository<Sales>().AddAsync(sales);
             await _unitOfWork.SaveChangesAsync();
@@ -38,7 +38,7 @@ namespace ElysionOrder.Application.Services.SalesServices
             //{
             //    await _billService.AddBillAfterSalesAsync(sales.Id);
             //}
-           
+
 
         }
 
@@ -224,16 +224,17 @@ namespace ElysionOrder.Application.Services.SalesServices
         public async Task<int> SetSalesNextStepAsync(SalesDto salesDto)
         {
             var sales = await _unitOfWork.GetRepository<Sales>().GetAll().Include(x => x.SalesStatus).Where(x => x.Status && x.SalesStatus.Status && x.Id == salesDto.Id).FirstOrDefaultAsync();
-            if (sales != null) 
+            if (sales != null)
             {
                 var salesstatues = await _unitOfWork.GetRepository<SalesStatus>().GetWhere(x => x.Status && x.LineNumber == sales.SalesStatus.LineNumber + 1).FirstOrDefaultAsync();
 
                 sales.SalesStatusId = salesstatues.Id;
                 _unitOfWork.GetRepository<Sales>().Update(sales);
-                if (salesstatues.LineNumber==5)
+                if (salesstatues.LineNumber == 5)
                 {
-                    var detail =await GetSalesWithIdAsync(sales.Id);
-                   await _billService.AddCustomerDebtAsync(detail);
+                    var detail = await GetSalesWithIdAsync(sales.Id);
+                    await _paymentService.AddCustomerDebtAsync(detail);
+                    
 
                 }
                 await _unitOfWork.SaveChangesAsync();
@@ -250,9 +251,9 @@ namespace ElysionOrder.Application.Services.SalesServices
             if (sales != null)
             {
                 var salesstatues = await _unitOfWork.GetRepository<SalesStatus>().GetWhere(x => x.Status && x.LineNumber == sales.SalesStatus.LineNumber - 1).FirstOrDefaultAsync();
-                if (salesstatues.LineNumber==0)
+                if (salesstatues.LineNumber == 0)
                 {
-                  await  _orderService.DeleteAllOrderWithSalesIdAsync(sales.Id);
+                    await _orderService.DeleteAllOrderWithSalesIdAsync(sales.Id);
                 }
 
                 sales.SalesStatusId = salesstatues.Id;
@@ -261,7 +262,7 @@ namespace ElysionOrder.Application.Services.SalesServices
                 return sales.SalesStatus.LineNumber;
             }
 
-          
+
             return -1;
 
         }
@@ -320,7 +321,7 @@ namespace ElysionOrder.Application.Services.SalesServices
                 {
                     salesdto.BackSalesStatusDto = _mapper.Map<SalesStatusDto>(sb);
                 }
-                var sn =await _unitOfWork.GetRepository<SalesStatus>().GetWhere(x => x.LineNumber == sales.SalesStatus.LineNumber + 1).FirstOrDefaultAsync();
+                var sn = await _unitOfWork.GetRepository<SalesStatus>().GetWhere(x => x.LineNumber == sales.SalesStatus.LineNumber + 1).FirstOrDefaultAsync();
 
                 if (sn != null)
                 {
@@ -329,6 +330,39 @@ namespace ElysionOrder.Application.Services.SalesServices
             }
 
             return salesdto;
+        }
+
+        public async Task<SalesDto> CreateBasicSalesAsync(BasicOrderDto basicOrderDto)
+        {
+
+
+            var sales = new Sales();
+            sales.Id = Guid.NewGuid();
+            sales.CustomerId = basicOrderDto.CustomerId;
+            var salesstatus = await _unitOfWork.GetRepository<SalesStatus>().GetFirstWhereAsync(x => x.Status && x.Name == "Başladı");
+            sales.SalesStatusId = salesstatus.Id;
+            await _unitOfWork.GetRepository<Sales>().AddAsync(sales);
+            await _unitOfWork.SaveChangesAsync();
+
+            foreach (var item in basicOrderDto.Orders.Where(x=>x.Quantity>0).ToList())
+            {
+                Order order = new Order();
+                order.SalesId = sales.Id;
+                order.ProductId = item.ProductId;
+                order.Piece = item.Quantity;
+                order.Discount = Convert.ToDouble(item.Discount);
+                order.Status = true;
+
+                await _unitOfWork.GetRepository<Order>().AddAsync(order);
+
+            }
+
+            await _unitOfWork.SaveChangesAsync();
+
+            var s = await _unitOfWork.GetRepository<Sales>().GetByIdAsync(sales.Id);
+            var ms = _mapper.Map<SalesDto>(s);
+            return ms;
+
         }
     }
 }

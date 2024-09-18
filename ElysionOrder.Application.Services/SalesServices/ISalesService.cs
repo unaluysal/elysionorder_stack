@@ -9,6 +9,7 @@ namespace ElysionOrder.Application.Services.SalesServices
         public Task<List<SalesDto>> GetAllPassiveSalesesAsync();
         public Task<SalesDto> GetSalesWithIdAsync(Guid id);
         public Task<SalesDto> CreateSalesAsync(SalesDto salesDto);
+        public Task<SalesDto> CreateBasicSalesAsync(BasicOrderDto basicOrderDto);
         public Task<List<SalesDto>> GetSalesWithStatusIdAsync(Guid id);
         public Task<List<SalesDto>> GetSalesesWithCustomerIdAsync(Guid id);
         public Task<List<SalesDto>> GetActiveSalesesWithCustomerIdAsync(Guid id);

@@ -1,55 +1,151 @@
-﻿@model ElysionOrder.Application.Services.Dtos.SalesDto
-
+﻿@using ElysionOrder.Application.Services.Dtos
+@model ElysionOrder.Application.Services.Dtos.BasicOrderDto
 @{
     ViewData["Title"] = "Satış Başlat";
-
- 
+    var products = ViewBag.Products as List<ProductDto>;
 }
 
+<form id="orderForm" asp-action="BasicAdd" method="post">
+    <div class="order-form">
+        <h2>Sipariş Ekleme</h2>
+        <div class="form-group">
+            <label for="customer">Müşteri Seç:</label>
+            <select id="customer" name="CustomerId" class="form-control">
+                <option value="">--Müşteri Seç--</option>
+                @foreach (var customer in ViewBag.Customers)
+                {
+                    <option value="@customer.Value">@customer.Text</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Ürün ve Miktar Gir:</label>
+            <div class="product-list">
+                <div class="product-headers">
+                    <span>Ürün</span>
+                    <span>Adet</span>
+                    <span>İskonto (%)</span>
+                    <span>Birim Fiyatı</span>
+                    <span>Para Birimi</span>
+                    <span>Vergi (%)</span>
+                    <span>Toplam Fiyat</span>
+                </div>
+                @foreach (var product in products)
+                {
+                    <div class="product-entry" data-product-id="@product.Id">
+                        <span>@product.Name</span>
+                        <input type="hidden" name="Orders.Index" value="@product.Id" />
+                        <input type="hidden" name="Orders[@product.Id].ProductId" value="@product.Id" />
+                        <input type="number" name="Orders[@product.Id].Quantity" class="form-control quantity-input" placeholder="Adet" />
+                        <input type="number" name="Orders[@product.Id].Discount" class="form-control discount-input" placeholder="İskonto (%)" min="0" max="100" />
+                        <input type="text" name="Orders[@product.Id].Price" class="form-control price-input" value="@product.Price" readonly />
+                        <span>@product.CurrencyDto.Name</span>
+                        <span class="tax-rate">@product.TaxDto.Rate</span>
+                        <input type="hidden" name="Orders[@product.Id].Total" class="total-input" value="0" />
+                        <span class="total-price">0</span>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="total">Toplam Tutar:</label>
+            <input type="text" id="total" name="OrderTotal" readonly class="form-control" />
+        </div>
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">Tamamla</button>
+            <button type="reset" class="btn btn-secondary">Temizle</button>
+            <button type="button" class="btn btn-danger">İptal</button>
+        </div>
+    </div>
+</form>
 
+<style>
+    .order-form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
 
+    .form-group {
+        margin-bottom: 20px;
+    }
 
-<div class="order-form">
-    <h2>Sipariş Ekleme</h2>
-    <br />
-    <div class="form-group">
-        <label for="customer">Müşteri Seç:</label>
-        <select id="customer" name="customer">
-            <option value="">--Müşteri Seç--</option>
-            @foreach (var customer in ViewBag.Customers)
-            {
-                <option value="@customer.Value">@customer.Text</option>
-            }
-        </select>
-    </div>
-    <br />
-    <div class="form-group">
-        <label for="product">Ürün Seç:</label>
-        <select id="product" name="product">
-            <option value="">--Ürün Seç--</option>
-            @foreach (var prodcut in ViewBag.Porducts)
-            {
-                <option value="@prodcut.Value">@prodcut.Text</option>
-            }
+    .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            }
-        </select>
-    </div>
-    <br />
-    <div class="form-group">
-        <label for="quantity">Miktar:</label>
-        <input type="number" id="quantity" name="quantity" min="1">
-    </div>
-    <br />
-    <div class="form-group">
-        <label for="price">Birim Fiyatı:</label>
-        <input type="text" id="price" name="price">
-    </div>
-   
-    <br />
-    <div class="form-buttons">
-        <button type="submit">Ekle</button>
-        <button type="reset">Temizle</button>
-        <button type="button">İptal</button>
-    </div>
-</div>
+    .product-headers, .product-entry {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .product-headers {
+        font-weight: bold;
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        margin: 5px;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const productEntries = document.querySelectorAll('.product-entry');
+
+        function calculateTotal(entry) {
+            const quantityInput = entry.querySelector('.quantity-input');
+            const discountInput = entry.querySelector('.discount-input');
+            const priceInput = entry.querySelector('.price-input');
+            const totalPrice = entry.querySelector('.total-price');
+            const totalInput = entry.querySelector('.total-input');
+            const taxRateSpan = entry.querySelector('.tax-rate');
+
+            const quantity = parseFloat(quantityInput.value) || 0;
+            const discount = parseFloat(discountInput.value) || 0;
+            const price = parseFloat(priceInput.value) || 0;
+            const taxRate = parseFloat(taxRateSpan.textContent) || 0;
+
+            const subtotal = quantity * price * ((100 - discount) / 100);
+            const taxAmount = subtotal * (taxRate / 100);
+            const total = subtotal + taxAmount;
+
+            totalPrice.textContent = total.toFixed(2);
+            totalInput.value = total.toFixed(2);
+        }
+
+        function calculateGrandTotal() {
+            const totalPrices = document.querySelectorAll('.total-price');
+            let grandTotal = 0;
+            totalPrices.forEach(price => {
+                grandTotal += parseFloat(price.textContent) || 0;
+            });
+            document.getElementById('total').value = grandTotal.toFixed(2);
+        }
+
+        productEntries.forEach(entry => {
+            const quantityInput = entry.querySelector('.quantity-input');
+            const discountInput = entry.querySelector('.discount-input');
+
+            quantityInput.addEventListener('input', () => {
+                calculateTotal(entry);
+                calculateGrandTotal();
+            });
+            discountInput.addEventListener('input', () => {
+                calculateTotal(entry);
+                calculateGrandTotal();
+            });
+        });
+    });
+</script>

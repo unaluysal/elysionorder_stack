@@ -41,7 +41,6 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\s
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\scopedcss\bundle\ElysionOrder.UI.styles.css
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\scopedcss\projectbundle\ElysionOrder.UI.bundle.scp.css
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\ElysionOrder.UI.csproj.CopyComplete
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\ElysionOrder.UI.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\refint\ElysionOrder.UI.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\ElysionOrder.UI.pdb
@@ -69,8 +68,6 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\M
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.DiaSymReader.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\Microsoft.NET.StringTools.dll
@@ -100,7 +97,6 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\S
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Composition.TypedParts.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Drawing.Common.dll
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\System.Security.Permissions.dll
@@ -306,3 +302,5 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\t
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\zh-Hans\System.ServiceModel.Federation.resources.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\zh-Hant\System.ServiceModel.Federation.resources.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\ElysionOrder.UI.sourcelink.json
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.UI\obj\Release\net6.0\ElysionO.EB88D8D7.Up2Date

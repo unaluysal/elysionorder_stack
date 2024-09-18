@@ -30,6 +30,7 @@ builder.Services.AddScoped<IRouteService , RouteService>();
 builder.Services.AddScoped<IStoreService , StoreService>();
 builder.Services.AddScoped<IStockService , StockService>();
 builder.Services.AddScoped<IBillService , BillService>();
+builder.Services.AddScoped<IPaymentService , PaymentService>();
 builder.Services.AddScoped<IReportService , ReportService>();
 builder.Services.AddScoped<IExpenseService , ExpenseService>();
 builder.Services.AddMemoryCache();

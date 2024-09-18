@@ -1,5 +1,4 @@
-﻿using EFaturaEDMTest;
-using ElysionOrder.Application.Services.CustomerServices;
+﻿using ElysionOrder.Application.Services.CustomerServices;
 using ElysionOrder.Application.Services.Dtos;
 using ElysionOrder.Application.Services.ProductServices;
 using ElysionOrder.Application.Services.SalesServices;
@@ -17,17 +16,17 @@ namespace ElysionOrder.UI.Controllers
         readonly IStockService _stockService;
         readonly IProductService _productService;
         readonly ICustomerService _customerService;
-        readonly IBillService _billService;
+        readonly IPaymentService _paymentService;
         readonly IPriceService _priceService;
 
         public StockController(IStoreService storeService, IStockService stockService, IProductService productService,
-            ICustomerService customerService, IBillService billService, IPriceService priceService)
+            ICustomerService customerService, IPaymentService paymentService, IPriceService priceService)
         {
             _storeService = storeService;
             _stockService = stockService;   
             _productService = productService;
             _customerService= customerService;
-            _billService = billService;
+            _paymentService = paymentService;
             _priceService = priceService;
         }
 
@@ -82,7 +81,7 @@ namespace ElysionOrder.UI.Controllers
             var bt = await _stockService.GetStokBillWithIdAsync(billDto.Id);
 
             await _stockService.BillToStockAsync(billDto.Id);
-           await _billService.AddCustomerDebtAsync(new SalesDto
+           await _paymentService.AddCustomerDebtAsync(new SalesDto
             {
 
                 CustomerId = bt.InvoicerId,

@@ -17,24 +17,27 @@ namespace ElysionOrder.Application.Services.CustomerServices
         readonly IRouteService _routeService;
         readonly ISalesService _salesService;
         readonly IUnitOfWork _unitOfWork;
-        readonly IBillService _billService;
-        public CustomerService( IMapper mapper, IRouteService routeService, ISalesService salesService, IUnitOfWork unitOfWork, IBillService billService)
+        readonly IPaymentService _paymentService;
+        public CustomerService( IMapper mapper, IRouteService routeService, ISalesService salesService, IUnitOfWork unitOfWork, IPaymentService paymentService)
         {
            
             _mapper = mapper;
             _routeService = routeService;
             _salesService = salesService;
             _unitOfWork = unitOfWork;
-            _billService = billService;
+            _paymentService = paymentService;
         }
 
 
         public async Task AddCustomerAsync(CustomerDto CustomerDto)
         {
             
-            var Customer = _mapper.Map<Customer>(CustomerDto);
-         
-            await _unitOfWork.GetRepository<Customer>().AddAsync(Customer);
+            var customer = _mapper.Map<Customer>(CustomerDto);
+
+            var cn = await _unitOfWork.GetRepository<Customer>().GetAll().OrderByDescending(x => x.CustomerNumber).FirstOrDefaultAsync();
+            int lsat = cn.CustomerNumber+1;
+            customer.CustomerNumber = lsat;
+            await _unitOfWork.GetRepository<Customer>().AddAsync(customer);
             await _unitOfWork.SaveChangesAsync();
 
         }
@@ -117,7 +120,7 @@ namespace ElysionOrder.Application.Services.CustomerServices
             cm.ActiveSales =await _salesService.GetActiveSalesesWithCustomerIdAsync(id);
             cm.AllSales =await _salesService.GetSalesesWithCustomerIdAsync(id);
             cm.AllSales = cm.AllSales.OrderBy(x => x.SalesStatusDto.Name).ToList();
-            cm.Payments = await _billService.GetAllCustomerPaymentsWithIdAsync(id);
+            cm.Payments = await _paymentService.GetAllCustomerPaymentsWithIdAsync(id);
             var payment = cm.Payments.Where(x => x.PaymentTypeDto.Type == "Pozitif").ToList().Sum(x => x.Total);
             var deb = cm.Payments.Where(x => x.PaymentTypeDto.Type == "Negatif").ToList().Sum(x => x.Total);
             cm.Debt = payment - deb;

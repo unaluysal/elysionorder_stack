@@ -752,7 +752,10 @@
       },
       "ElysionOrder.Domain/1.0.0": {
         "runtime": {
-          "ElysionOrder.Domain.dll": {}
+          "ElysionOrder.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ElysionOrder.Infrastructure.Data/1.0.0": {
@@ -764,7 +767,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.5"
         },
         "runtime": {
-          "ElysionOrder.Infrastructure.Data.dll": {}
+          "ElysionOrder.Infrastructure.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

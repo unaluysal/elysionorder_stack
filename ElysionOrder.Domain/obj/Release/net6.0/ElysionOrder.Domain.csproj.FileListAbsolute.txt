@@ -1,7 +1,6 @@
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\bin\Release\net6.0\ElysionOrder.Domain.deps.json
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\bin\Release\net6.0\ElysionOrder.Domain.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\bin\Release\net6.0\ElysionOrder.Domain.pdb
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.csproj.AssemblyReference.cache
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.AssemblyInfoInputs.cache
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\refint\ElysionOrder.Domain.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.pdb
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ref\ElysionOrder.Domain.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Domain\obj\Release\net6.0\ElysionOrder.Domain.sourcelink.json

@@ -10,8 +10,9 @@ C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\ob
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.AssemblyInfoInputs.cache
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.AssemblyInfo.cs
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.csproj.CoreCompileInputs.cache
-C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.csproj.CopyComplete
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\refint\ElysionOrder.Application.Services.dll
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.pdb
 C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ref\ElysionOrder.Application.Services.dll
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionOrder.Application.Services.sourcelink.json
+C:\Users\Unal\Desktop\Projeler\ElysionOrder\ElysionOrder.Application.Services\obj\Release\net6.0\ElysionO.FFBB477E.Up2Date
